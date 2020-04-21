@@ -4,12 +4,10 @@ include "sql.php";
 include "fonction.php";
 include "header.php";
 
-
 @$id_cat = htmlspecialchars($_POST["id_cat"]);
 @$links = links();
 
 ?>
-
 
 <div class="carousel">
     <section class="regular slider" id="photo">

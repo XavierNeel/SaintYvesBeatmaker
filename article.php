@@ -1,20 +1,16 @@
 <?php
+
 include "sql.php";
 include "fonction_blog.php";
 include "header.php";
 
-
-
 ?>
 
-
 <?php
+
 $list_cat = list_cat();
 $list_title =  list_title();
-
 @$id_blog = $_GET["id"];
-
-
 
 @$ajouter = htmlspecialchars($_POST["ajouter"]);
 @$modifier = htmlspecialchars($_POST["modifier"]);
@@ -22,83 +18,58 @@ $list_title =  list_title();
 @$view = htmlspecialchars($_POST["view"]);
 @$id_view = htmlspecialchars($_POST["id_view"]);
 
-
-
-
-
-if ($ajouter) {
-    insert_view($id_blog, $view);
+if ($ajouter) 
+{
+insert_view($id_blog, $view);
 }
-
-
-
 
 $blog_unique = blog_unique($id_blog);
 $recup_view = list_view($id_blog);
-
-// var_dump($blog_unique);
-
 ?>
+
 <div class="image">
     <img src="upload/<?php echo @$blog_unique->img ?>" alt=""><br>
-    </div>
+</div>
 
-    <div class="jumbotron">
-        <h1 class="titre"><?php echo stripslashes($blog_unique->title_blog) ?></h1>
-        <p class="blog"><?php echo stripslashes($blog_unique->blog) ?></p>
-        <hr class="name">
-        <p><?php echo $blog_unique->lastname ?> <?php echo $blog_unique->firstname ?></p>
+<div class="jumbotron">
+    <h1 class="titre"><?php echo stripslashes($blog_unique->title_blog) ?></h1>
+    <p class="blog"><?php echo stripslashes($blog_unique->blog) ?></p>
+    <hr class="name">
+    <p><?php echo $blog_unique->lastname ?> <?php echo $blog_unique->firstname ?></p>
 
-        <button type="submit" id="comment" class="fas fa-comments" data-toggle="modal" data-target="#exampleModal" name="laissez un commentaire" value="laissez un commentaire">laissez un commentaire</button>
-        <button type="submit" id="avis" class="far fa-eye " data-toggle="collapse" data-target="#collapseExample" name="voir avis" value="voir avis">avis</button>
-
-    </div>
-
-
-
-
-
-
+    <button type="submit" id="comment" class="fas fa-comments" data-toggle="modal" data-target="#exampleModal" name="laissez un commentaire" value="laissez un commentaire">laissez un commentaire</button>
+    <button type="submit" id="avis" class="far fa-eye " data-toggle="collapse" data-target="#collapseExample" name="voir avis" value="voir avis">avis</button>
+</div>
 
 <div class="container">
-
-    <div class="collapse" id="collapseExample">
-
-        <?php if ($blog_unique->view) { ?>
-            <?php foreach ($recup_view as $row) { ?>
-
-             
-                    <div class="card-body x">
-                        <h5 class="card-title"> <?php echo @$row->author ?>:<?php '..' ?> <?php echo @$row->view ?></h5>
-                        
-                    </div>
-                
-
-            <?php } ?>
+  <div class="collapse" id="collapseExample">
+    <?php if ($blog_unique->view) { ?>
+        <?php foreach ($recup_view as $row) { ?>
+          <div class="card-body x">
+            <h5 class="card-title"> <?php echo @$row->author ?>:<?php '..' ?> <?php echo @$row->view ?></h5>
+        </div>
         <?php } ?>
-
-    </div>
+        <?php } ?>
+  </div>
 </div>
 
 <script>
-    $(document).ready(function() {
 
+$(document).ready(function() 
+{
+$('[data-toggle="collapse"]').click(function() {
+$(this).toggleClass("active");
+if ($(this).hasClass("active")) 
+{
+$(this).text("Hide");
+} else 
+{
+$(this).text("Show");
+}
+});
+});
 
-        $('[data-toggle="collapse"]').click(function() {
-            $(this).toggleClass("active");
-            if ($(this).hasClass("active")) {
-                $(this).text("Hide");
-            } else {
-                $(this).text("Show");
-            }
-        });
-
-
-        // document ready
-    });
 </script>
-
-
 
 <?php include "footer.php"; ?>
 

@@ -8,10 +8,12 @@
         <a href="https://soundcloud.com/saintyvesbeatmaker/tracks"><img src="photo/soundcloud.png" style="width:50px;" alt="soundcloud"></a>
         <a href="https://saintyves.bandcamp.com/"><img src="photo/bandcamp.png" style="width:50px;" alt="bandcamp" /></a>
     </div>
+
     <div>
     <p class="mention"><a href="mentionlegale.php">Mentions légales </a></p>
     <p class="cookie"><a href="cookiebot.php">cookie </a></p>
     </div>
+
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -19,11 +21,8 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script src="./slick/slick.js"></script>
 
-
-
-
 <script>
-    $('.regular').slick({
+$('.regular').slick({
         dots: true,
         infinite: false,
         speed: 300,
@@ -59,10 +58,8 @@
     });
 </script>
 
-
 <?php ob_flush() ?>
 
 </body>
-
 
 </html>

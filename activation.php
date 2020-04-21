@@ -8,8 +8,6 @@ include "header.php";
 
 <?php
 
-ddd
-
 // Récupération des variables nécessaires à l'activation
 $login = $_GET['log'];
 $cle = $_GET['cle'];
@@ -17,8 +15,6 @@ $cle = $_GET['cle'];
 
 // Récupération de la clé correspondant au $login dans la base de données
 $list_cle = list_cle($login);
-
-
 
 // On teste la valeur de la variable $actif récupérée dans la BDD
 if ($active == '1') // Si le compte est déjà actif on prévient
@@ -38,8 +34,6 @@ if ($active == '1') // Si le compte est déjà actif on prévient
         echo "Erreur ! Votre compte ne peut être activé...";
     }
 }
- 
- 
 //...    
 // Fermeture de la connexion    
 //...

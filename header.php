@@ -54,20 +54,17 @@
 <div>
 <div class="res">reseaux sociaux</div> 
 <ul class="lien">
-
-
-        <li><a href="https://www.youtube.com/channel/UCO8F6et9nPeQ3pI0RzAywCA"><img src="photo/youtube.png" style="width:50px;" alt="youtube"></a></li>
-        <li><a href="https://www.instagram.com/saintyvesbeatmaker/"><img src="photo/insta.png" style="width:50px;" alt="instagram"></a></li>
-        <li><a href="https://www.facebook.com/saintyvesbeatmaker/"><img src="photo/facebook.png" style="width:50px;" alt="facebook"></a></li>
-        <li><a href="https://soundcloud.com/saintyvesbeatmaker/tracks"><img src="photo/soundcloud.png" style="width:50px;" alt="soundcloud"></a></li> 
-        <li><a href="https://saintyves.bandcamp.com/"><img src="photo/bandcamp.png" style="width:50px;" alt="bandcamp" /></a></li> 
+  <li><a href="https://www.youtube.com/channel/UCO8F6et9nPeQ3pI0RzAywCA"><img src="photo/youtube.png" style="width:50px;" alt="youtube"></a></li>
+  <li><a href="https://www.instagram.com/saintyvesbeatmaker/"><img src="photo/insta.png" style="width:50px;" alt="instagram"></a></li>
+  <li><a href="https://www.facebook.com/saintyvesbeatmaker/"><img src="photo/facebook.png" style="width:50px;" alt="facebook"></a></li>
+  <li><a href="https://soundcloud.com/saintyvesbeatmaker/tracks"><img src="photo/soundcloud.png" style="width:50px;" alt="soundcloud"></a></li> 
+  <li><a href="https://saintyves.bandcamp.com/"><img src="photo/bandcamp.png" style="width:50px;" alt="bandcamp" /></a></li> 
 </ul>
 </div>
+
 <form class="form-inline my-2 my-lg-0" method="POST" action="recherche.php">
    <input id="recherche" class="form-control mr-sm-2" name="search" value="<?php echo (@$result->search) ?>" type="search" placeholder="Search">
    <input id="photo" type="image" src="photo/loupe.png" style="width:50px;" alt="recherche" class="btn" name="search">
 </form>
+
 </header>
-
-
-

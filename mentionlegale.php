@@ -3,56 +3,45 @@ include "sql.php";
 include "fonction_blog.php";
 include "header.php";
 
-
-
 ?>
-
-
 
 <div class="container">
 
-    <h1>mention légale</h1>
+<h1>mention légale</h1>
+<p>Merci de lire avec attention les différentes modalités d’utilisation du présent site avant d’y parcourir ses pages. En vous connectant sur ce site, vous acceptez sans réserves les présentes modalités. Aussi, conformément à l’article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l’économie numérique, les responsables du présent site internet saintyvesbeatmaker.000webhostapp.com sont: </p>
 
-
-
-
-    <p>Merci de lire avec attention les différentes modalités d’utilisation du présent site avant d’y parcourir ses pages. En vous connectant sur ce site, vous acceptez sans réserves les présentes modalités. Aussi, conformément à l’article n°6 de la Loi n°2004-575 du 21 Juin 2004 pour la confiance dans l’économie numérique, les responsables du présent site internet saintyvesbeatmaker.000webhostapp.com sont: </p>
-
-    <h6>Editeur du Site :NX</h6>
-    <h6>Hébergement:000webhost.com</h6>
-    <h6>Développement:NX</h6>
-
+<h6>Editeur du Site :NX</h6>
+<h6>Hébergement:000webhost.com</h6>
+<h6>Développement:NX</h6>
+<br>
+<div>
+    <h2>Conditions d’utilisation :</h2>
     <br>
-    <div>
-        <h2>Conditions d’utilisation :</h2>
-        <br>
-        <p>Ce site (saintyvesbeatmaker.000webhostapp.com ) est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…)
-            <br>
+    <p>Ce site (saintyvesbeatmaker.000webhostapp.com ) est proposé en différents langages web (HTML, HTML5, Javascript, CSS, etc…)
+    <br>
+    pour un meilleur confort d’utilisation et un graphisme plus agréable, nous vous recommandons de recourir à des navigateurs modernes comme Internet explorer, Safari, Firefox, Google Chrome, etc…
+    <br>
+    NX met en œuvre tous les moyens dont elle dispose, pour assurer une information fiable et une mise à jour fiable de ses sites internet.
+    <br>
+    Toutefois, des erreurs ou omissions peuvent survenir.
+    <br>
+    L’internaute devra donc s’assurer de l’exactitude des informations et signaler toutes modifications du site qu’il jugerait utile.
+    <br>
+    n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.
+    <br>
+    Liens hypertextes : Les sites internet de peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur Internet.
+    <br>
+    NX ne dispose d’aucun moyen pour contrôler les sites en connexion avec ses sites internet.
+    <br>
+    ne répond pas de la disponibilité de tels sites et sources externes, ni de la garantis.
+    <br>
+    Elle ne peut être tenue pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes, et notamment des informations, produits ou services qu’ils proposent, ou de tout usage qui peut être fait de ces éléments.
+    <br>
+    Les risques liés à cette utilisation incombent pleinement à l’internaute, qui doit se conformer à leurs conditions d’utilisation.
+    <br>
+</div>
 
-            pour un meilleur confort d’utilisation et un graphisme plus agréable, nous vous recommandons de recourir à des navigateurs modernes comme Internet explorer, Safari, Firefox, Google Chrome, etc…
-            <br>
-
-            NX met en œuvre tous les moyens dont elle dispose, pour assurer une information fiable et une mise à jour fiable de ses sites internet.
-            <br>
-            Toutefois, des erreurs ou omissions peuvent survenir.
-            <br>
-            L’internaute devra donc s’assurer de l’exactitude des informations et signaler toutes modifications du site qu’il jugerait utile.
-            <br>
-            n’est en aucun cas responsable de l’utilisation faite de ces informations, et de tout préjudice direct ou indirect pouvant en découler.
-            <br>
-            Liens hypertextes : Les sites internet de peuvent offrir des liens vers d’autres sites internet ou d’autres ressources disponibles sur Internet.
-            <br>
-            NX ne dispose d’aucun moyen pour contrôler les sites en connexion avec ses sites internet.
-            <br>
-            ne répond pas de la disponibilité de tels sites et sources externes, ni de la garantis.
-            <br>
-            Elle ne peut être tenue pour responsable de tout dommage, de quelque nature que ce soit, résultant du contenu de ces sites ou sources externes, et notamment des informations, produits ou services qu’ils proposent, ou de tout usage qui peut être fait de ces éléments.
-            <br>
-            Les risques liés à cette utilisation incombent pleinement à l’internaute, qui doit se conformer à leurs conditions d’utilisation.
-            <br>
-    </div>
-
-    <h2>Services fournis :</h2>
+<h2>Services fournis :</h2>
     <br>
     NX s’efforce de fournir sur le site saintyvesbeatmaker.000webhostapp.com des informations aussi précises que possible.
     <br>
@@ -76,6 +65,7 @@ include "header.php";
     <br>
     Les liens hypertextes mis en place dans le cadre du présent site internet en direction d’autres ressources présentes sur le réseau Internet ne sauraient engager la responsabilité de NX
     <br>
+
 <h2>enregistrement de vos données</h2>
 
 Les informations recueillies lors de votre inscription  sont enregistrées dans une basse de donnée  (Nom, Prenom, adresse email) et conservé.
@@ -92,13 +82,15 @@ Pour exercer ces droits ou pour toute question sur le traitement de vos données
 <br>
 Si vous estimez, après nous avoir contactés, que vos droits « Informatique et Libertés » ne sont pas respectés, vous pouvez adresser une réclamation à la CNIL.
 <br>
+
 <h3> Litiges :</h3>
     <br>
     Les présentes conditions du site saintyvesbeatmaker.000webhostapp.com sont régies par les lois françaises et toute contestation ou litiges qui pourraient naître de l’interprétation ou de l’exécution de celles-ci seront de la compétence exclusive des tribunaux dont dépend le siège social de la société.
     <br>
     La langue de référence, pour le règlement de contentieux éventuels, est le français.
     <br>
-    <h3> Données personnelles :</h3>
+
+<h3> Données personnelles :</h3>
 
     De manière générale, vous n’êtes pas tenu de nous communiquer vos données personnelles lorsque vous visitez notre site Internet saintyvesbeatmaker.000webhostapp.com
     <br>
@@ -114,11 +106,8 @@ Si vous estimez, après nous avoir contactés, que vos droits « Informatique et
     </p>
 </div>
 
-
 <?php
 
 include "footer.php";
-
-
 
 ?>
