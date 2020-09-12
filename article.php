@@ -36,8 +36,7 @@ $recup_view = list_view($id_blog);
     <p class="blog"><?php echo stripslashes($blog_unique->blog) ?></p>
     <hr class="name">
     <p><?php echo $blog_unique->lastname ?> <?php echo $blog_unique->firstname ?></p>
-
-    <button type="submit" id="comment" class="fas fa-comments" data-toggle="modal" data-target="#exampleModal" name="laissez un commentaire" value="laissez un commentaire">laissez un commentaire</button>
+    <button type="submit" id="comment" class="fas fa-comments" data-toggle="modal" data-target="#exampleModal1" name="laissez un commentaire" value="laissez un commentaire">laissez un commentaire</button>
     <button type="submit" id="avis" class="far fa-eye " data-toggle="collapse" data-target="#collapseExample" name="voir avis" value="voir avis">avis</button>
 </div>
 
@@ -53,29 +52,15 @@ $recup_view = list_view($id_blog);
   </div>
 </div>
 
-<script>
 
-$(document).ready(function() 
-{
-$('[data-toggle="collapse"]').click(function() {
-$(this).toggleClass("active");
-if ($(this).hasClass("active")) 
-{
-$(this).text("Hide");
-} else 
-{
-$(this).text("Show");
-}
-});
-});
 
-</script>
+
 
 <?php include "footer.php"; ?>
 
 <?php if ($blog_unique->view) { ?>
     <form action="article.php?id=<?php echo $id_blog; ?>" method="post">
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -95,3 +80,20 @@ $(this).text("Show");
         </div>
     </form>
 <?php } ?>
+
+<script>
+$(document).ready(function() 
+{
+$('[data-toggle="collapse"]').click(function() {
+$(this).toggleClass("active");
+if ($(this).hasClass("active")) 
+{
+$(this).text("Hide");
+} else 
+{
+$(this).text("Show");
+}
+});
+});
+
+</script>

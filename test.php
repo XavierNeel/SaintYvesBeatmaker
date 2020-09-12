@@ -17,7 +17,7 @@ $mail->isSMTP(); // Paramétrer le Mailer pour utiliser SMTP
 $mail->Host = 'VOTRE SMTP'; // Spécifier le serveur SMTP
 $mail->SMTPAuth = true; // Activer authentication SMTP
 $mail->Username = 'xavierneel@gmail.com'; // Votre adresse email d'envoi
-$mail->Password = 'Adameteve1'; // Le mot de passe de cette adresse email
+$mail->Password = 'Adameteve20201'; // Le mot de passe de cette adresse email
 $mail->SMTPSecure = 'ssl'; // Accepter SSL
 $mail->Port = 465;
 

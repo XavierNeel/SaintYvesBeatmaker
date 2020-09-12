@@ -4,9 +4,9 @@ define('AES_KEY',  'KHOzQvH8ED8Jt6JcOuDsO6whgwXwFPXt');
 define('AES_IV',   '2WLvx9Hv9ZWXaEmC');
 
 define("PDO_HOST", "localhost");
-define("PDO_DBBASE", "sy");
+define("PDO_DBBASE", "saintyvesbeatmaker");
 define("PDO_USER", "root");
-define("PDO_PW", "root");
+define("PDO_PW", "");
 try {
     $connection = new PDO(
         "mysql:host=" . PDO_HOST . ";" .

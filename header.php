@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css?un=<?php echo $unique; ?>">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="text/javascript" id="cookieinfo" src="//cookieinfoscript.com/js/cookieinfo.min.js">
+</script>
+
     <title>SY Beatmaker</title>
 </head>
 
@@ -68,3 +71,4 @@
 </form>
 
 </header>
+<body>
