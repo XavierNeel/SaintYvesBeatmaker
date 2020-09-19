@@ -6,12 +6,12 @@ include "fonction.php";
 include "header.php";
 
 
-$id_user = $_GET['id'];
+
 
 if (isset($_POST)) 
 {
 @$id_user = htmlspecialchars($_POST["id_user"]);
-$id_user = $_GET['id'];
+@$var1 = $_GET['id'];
 @$passe = htmlspecialchars($_POST['passe']);
 @$mot_de_passe2 = htmlspecialchars($_POST['mot_de_passe2']);
 @$modifier = htmlspecialchars($_POST['modifier']);
@@ -39,21 +39,44 @@ if (preg_match('#^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*\W).{6,}$#', $passe)) {
     $erreur = 'Vos mot de passe ne correspondent pas, merci de retaper votre mot de passe';
     }
 }
-if (isset($_GET["id"])) 
+
+if (isset($_GET["id"])) {
+    
+$var1 = $_GET["id"]; 
+$var2 = aesDecrypt($var1);
+var_dump($var1);
+var_dump($var2);
+?>
+
+<?php 
+@$mail= htmlspecialchars($_POST["mail"]);
+@$id_user = htmlspecialchars($_POST["id_user"]);
+
+// var_dump($verif);
+$verif = verification_id();
+foreach ($verif as $row) { ?>
+<?php echo stripslashes($row->mail) ?>
+    <?php      
+$var2 = aesDecrypt($var1);
+if  (verification_id()) 
 {
-$id_user = $_GET["id"];
-$var2 = aesDecrypt($id_user);
-if (verification_id($var2)) 
-{
-//echo 'ok tu passes';
-//echo  $verification_id;
+   
+    
+echo 'ok tu passes';
+
 } 
+
 else 
 {
-//$erreur = "Vous n'avez pas copié le bon lien ou merci de contacter l'administrateur";
+$erreur = "Vous n'avez pas copié le bon lien ou merci de contacter l'administrateur";
 // header('location:login.php');
 ob_end_flush();
-}
+} 
+?>  <?php } ?>
+    <?php
+
+
+
 
 } 
 else 
@@ -94,3 +117,5 @@ echo 'Erreur pas id ';
             <a class="navbar-brand mt-5" href="#"></a>
     </div>
 </div>
+
+

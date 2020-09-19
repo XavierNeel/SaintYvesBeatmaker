@@ -323,18 +323,19 @@ WHERE mail='$mail'";
 $sth = $connection->prepare($sql);
 $sth->execute();
 $resultat = $sth->fetch(PDO::FETCH_OBJ);
-return @$resultat->id_user;
+return @$resultat->mail;
 }
 
-function verification_id($var2)
+function verification_id()
 {
 global $connection;
-$sql = "SELECT * FROM users
-WHERE id_user = $var2";
+$sql = "SELECT * FROM users";
 $sth = $connection->prepare($sql);
 $sth->execute();
-$resultat = $sth->fetch(PDO::FETCH_OBJ);
+$resultat = $sth->fetchALL(PDO::FETCH_OBJ);
 return $resultat;
+// var_dump($resultat);
+
 }
 
 function modifier_motdepasse($id_user, $passe)
@@ -346,4 +347,5 @@ SET passe = '$cryptage'
 WHERE id_user = $id_user";
 $sth = $connection->prepare($sql);
 $sth->execute();
+var_dump($passe);
 }

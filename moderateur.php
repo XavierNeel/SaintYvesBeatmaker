@@ -31,13 +31,14 @@ if ($supprime)
 delete_view($id_view);
 }
 
-$list_view = list_view_complet();
+
 $unique = uniqid();
 
 ?>
 
 <div class="moderation">
     <form action="moderateur.php" method="post">
+   <?php $list_view = list_view_complet($id_view);?>
           <?php foreach ($list_view as $row) { ?>
             <div><?php echo $row->title_blog ?></div>
             <div><?php echo $row->id_blog ?></div>
@@ -45,9 +46,11 @@ $unique = uniqid();
             <input type="submit" name="valider" value="valider">
             <input type="hidden" class="btn" name="id_view" value="<?php echo $row->id_view ?>">
             <input type="submit" class="btn" name="supprime" value="supprimer">
+           
             <hr>
 
-        <?php } ?>
+       
     </form>
+    <?php } ?>
 </div>
 <?php include "footer.php" ?>

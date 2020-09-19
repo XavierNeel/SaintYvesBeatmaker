@@ -5,4 +5,4 @@ include "header.php";
 
 ?>
 
-<h1>Vous venez de changez votre nouveau mot de passe , penser à le conserver</h1>
+<h5>Vous venez de changez votre nouveau mot de passe , penser à le conserver</h5>

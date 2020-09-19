@@ -375,9 +375,19 @@ color: black ;
 
 .logo
 {
-width:50px; 
-height:50px;
+display: none;
 }
+
+.btn
+{
+  color:black; 
+ font-size: 10px;
+}
+.res
+{
+  display: none;
+}
+
 .slider 
 {
   width:85%;
@@ -474,7 +484,11 @@ color: black  ;
   width:85%;
   height: 40%;
 }
-
+.logo
+{
+width:50px;
+height: 50px;
+}
 .footer
 {
 background-color:rgb(192, 56, 18)     ;

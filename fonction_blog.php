@@ -181,19 +181,41 @@ return $resultat;
 }
 
 
-function insert_view($id_blog, $view)
+function insert_view($id_blog,$view)
 {
+   
 global $connection;
-@$lastname = $_SESSION["lastname"];
-@$firstname = $_SESSION["firstname"];
-$sql_ins = "INSERT INTO views(id_blog, view, author) VALUES (:id_blog,:view,:author)";
+
+$sql_ins = "INSERT INTO views(id_blog,view) VALUES (:id_blog,:view)";
 $sth = $connection->prepare($sql_ins);
 $sth->execute(array(
-        ':id_blog' => $id_blog,
-        ':view' => $view,
-        ':author' => "$lastname $firstname"
+        ':id_blog'=>$id_blog,
+        ':view'=>$view
+        
+       
 ));
+    $id_view = $connection->lastInsertId();
+    $id_user = $_SESSION["id_user"];
+    insert_liaisonblog($id_user,$id_blog, $id_view);
 }
+
+function insert_liaisonblog($id_user,$id_blog, $id_view)
+{
+// recup de la connection
+global $connection;
+$sql_ins = "INSERT INTO liaisonblog(id_user,id_blog,id_view) VALUES (:id_user, :id_blog,:id_view)";
+$sth = $connection->prepare($sql_ins);
+$sth->execute(array(
+    ':id_user' => $id_user,
+    ':id_blog' => $id_blog,
+    ':id_view' => $id_view
+    
+      ));
+}
+
+
+
+
 
 function list_view($id_blog)
 {
@@ -207,6 +229,19 @@ $resultat = $sth->fetchAll(PDO::FETCH_OBJ);
 return $resultat;
 }
 
+function listview()
+{
+global $connection;
+$sql = "SELECT * FROM liaisonblog
+INNER JOIN users ON users.id_user = liaisonblog.id_user
+INNER JOIN blogs ON blogs.id_blog= liaisonblog.id_blog
+INNER JOIN views ON views.id_view = liaisonblog.id_view
+WHERE views.valid=1";
+$sth = $connection->prepare($sql);
+$sth->execute();
+$resultat = $sth->fetchALL(PDO::FETCH_OBJ);
+return $resultat;
+}
 
 // fonction date qui mermet de recuperer le timelaps de phpmyadmin et de le convertir en version francaise
 function frdate($date1)
@@ -219,13 +254,13 @@ return $date2;
 function list_view_complet()
 {
 global $connection;
-$sql = "SELECT *,views.view AS view FROM views
-INNER JOIN blogs ON blogs.id_blog =blogs.id_blog
-WHERE valid =0
+$sql = "SELECT *,views.view FROM views
+INNER JOIN blogs ON blogs.id_blog =views.id_blog
+WHERE valid =0 
 ORDER BY date_crea DESC";
 $sth = $connection->prepare($sql);
 $sth->execute();
-$resultat = $sth->fetchAll(PDO::FETCH_OBJ);
+$resultat = $sth->fetchALL(PDO::FETCH_OBJ);
 return $resultat;
 }
 

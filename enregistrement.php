@@ -24,25 +24,25 @@ if ($_POST)
 @$passe = htmlspecialchars($_POST["passe"]);
 $pass_hash =  decrypt($passe);
 $cle = md5(microtime(TRUE) * 100000);
-$responseKey = $_POST['g-recaptcha-response'];
+// $responseKey = $_POST['g-recaptcha-response'];
 @$secretKey = "6LcO89oUAAAAAAT1Z25cgmzGJXW4UDFRC0EJSwv_";
 $userIP = $_SERVER['REMOTE_ADDR'];
-$url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
-    $response = file_get_contents($url);
-    $response = json_decode($response);
-    if ($response->success) 
-    {
+// $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&response=$responseKey&remoteip=$userIP";
+//     $response = file_get_contents($url);
+//     $response = json_decode($response);
+//     if ($response->success) 
+//     {
 
-    echo "your name is $lastname";
+    echo "bonjour $lastname";
     $lastname = htmlspecialchars($_POST["lastname"]);
     $add_login = add_login($lastname, $firstname, $adress,  $login, $pass_hash, $cle);
     $mail = new PHPmailer(true);
-    $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;
     $mail->isSMTP(); // Paramétrer le Mailer pour utiliser SMTP 
     $mail->Host = 'smtp.gmail.com'; // Spécifier le serveur SMTP
     $mail->SMTPAuth = true; // Activer authentication SMTP
     $mail->Username = 'xavierneel@gmail.com'; // Votre adresse email d'envoi
-    $mail->Password = 'Adameteve20201'; // Le mot de passe de cette adresse email
+    $mail->Password = 'Adameteve1979&'; // Le mot de passe de cette adresse email
     $mail->SMTPSecure = 'ssl'; // Accepter SSL
     $mail->Port = 465;
     $mail->setFrom('xavierneel@gmail.com', 'gmail'); // Personnaliser l'envoyeur
@@ -58,7 +58,7 @@ $url = "https://www.google.com/recaptcha/api/siteverify?secret=$secretKey&respon
     $mail->Body = 'Pour activer votre compte, veuillez cliquer sur le lien ci-dessous
 ou copier/coller dans votre navigateur Internet. attention toutefois veuillez bien lire les mentions legales dans mention en bas de page du site.
  
-http://localhost/sybeatmaker/activation.php?log=' . urlencode($login) . '&cle=' . urlencode($cle) . ""; 
+http://saintyvesbeatmaker/activation.php?log=' . urlencode($login) . '&cle=' . urlencode($cle) . ""; 
  
 
     if (!$mail->send()) 
@@ -69,14 +69,14 @@ http://localhost/sybeatmaker/activation.php?log=' . urlencode($login) . '&cle=' 
 
     else 
     {
-    echo  '"."Le message a bien été envoyé !';
+    echo  'alert(bonjour veuillez verifier votre mail)"."Le message a bien été envoyé !';
     }
 
-} 
-else 
-{
-echo "verification failed!";
-}
+// } 
+// else 
+// {
+// echo "verification failed!";
+// }
 
 }
 
@@ -106,7 +106,7 @@ echo "verification failed!";
     <input type="password" name="passe" value="" required>
     <br>
     <div> <input type="hidden" name="cle" value="<?php echo @$cle ?>"></div>
-    <div class="g-recaptcha" data-sitekey="6LcO89oUAAAAAAmSFsdnOZqhcsJMNy-If9qPF4KX"></div>
+    <!-- <div class="g-recaptcha" data-sitekey="6LcO89oUAAAAAAmSFsdnOZqhcsJMNy-If9qPF4KX"></div> -->
     <br>
     <input type="submit" class="btn" name="submit" value="s'inscrire">
     <br>

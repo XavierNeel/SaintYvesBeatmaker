@@ -20,6 +20,7 @@
     <title>SY Beatmaker</title>
 </head>
 
+  
 <header> 
 <div class="nav">
 <img class="logo" src="photo/sybeatmaker.jpg" alt="banniere">
