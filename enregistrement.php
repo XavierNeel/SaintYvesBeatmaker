@@ -41,8 +41,8 @@ $userIP = $_SERVER['REMOTE_ADDR'];
     $mail->isSMTP(); // Paramétrer le Mailer pour utiliser SMTP 
     $mail->Host = 'smtp.gmail.com'; // Spécifier le serveur SMTP
     $mail->SMTPAuth = true; // Activer authentication SMTP
-    $mail->Username = 'xavierneel@gmail.com'; // Votre adresse email d'envoi
-    $mail->Password = 'Adameteve1979&'; // Le mot de passe de cette adresse email
+    $mail->Username = '**********'; // Votre adresse email d'envoi
+    $mail->Password = '**********'; // Le mot de passe de cette adresse email
     $mail->SMTPSecure = 'ssl'; // Accepter SSL
     $mail->Port = 465;
     $mail->setFrom('xavierneel@gmail.com', 'gmail'); // Personnaliser l'envoyeur
